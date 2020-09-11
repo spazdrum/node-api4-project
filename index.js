@@ -1,7 +1,8 @@
 const express = require("express");
+require('dotenv').config();
 const pRouter = require("./router");
 const server = express();
-const port = 5000;
+const port = process.env.port || 5050 ;
 
 server.use(express.json());
 server.use(pRouter);
